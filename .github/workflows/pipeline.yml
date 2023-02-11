@@ -16,6 +16,6 @@ jobs:
       - run: npm ci
       - run: npm run build:lib
       - run: cd dist/reactor-for-angular
-      - run: npm publish
+      - run: npm publish --access=public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
