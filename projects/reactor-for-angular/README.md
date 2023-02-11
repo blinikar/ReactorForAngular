@@ -22,3 +22,7 @@ This library supports both React 17 and 18 root API.
     }
   }
 ```
+
+## Source code
+
+[GitHub](https://github.com/blinikar/ReactInAngularLib)
