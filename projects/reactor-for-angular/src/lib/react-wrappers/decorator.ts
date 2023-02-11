@@ -1,10 +1,10 @@
-import React from "react";
+import React, { ReactElement } from "react";
 
 // @ts-ignore
 import ReactDOM from "react-dom";
 
 export const ReactorReact = () => {
-  return (constructor: any) => {
+  return <T extends { new (...args: any[]): { getElement: () => ReactElement, viewChild: Element } }>(constructor: T) => {
     const LIFECYCLE_HOOKS = [
       'ngAfterViewInit',
       'ngOnChanges',

@@ -1,24 +1,24 @@
 # ReactorForAngular
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.0.
+This is ReactorForAngular library, that will help you to run React in your Angular project simple and fast.
 
-## Code scaffolding
+This library supports both React 17 and 18 root API.
 
-Run `ng generate component component-name --project ReactorForAngular` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ReactorForAngular`.
-> Note: Don't forget to add `--project ReactorForAngular` or else it will be added to the default project in your `angular.json` file. 
+## Rapid Start
 
-## Build
-
-Run `ng build ReactorForAngular` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Publishing
-
-After building your library with `ng build ReactorForAngular`, go to the dist folder `cd dist/reactor-for-angular` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test ReactorForAngular` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Install the library: `npm i reactor-for-angular`
+- Write your wrapper:
+```@Component({
+  selector: 'react-component-wrapper',
+  template: `<span #title>Here will be a component</span>`
+  })
+  @ReactorReact()
+  export class ReactComponentWrapper {
+    @ViewChild('title') viewChild: Element = {} as Element;
+    @Input() public parameter!: string;
+  
+    getElement() {
+      return <RealReactComponent parameter={this.parameter} method={() => {}} />
+    }
+  }
+```
