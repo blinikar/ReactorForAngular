@@ -6,9 +6,8 @@ This library supports both React 17 and 18 root API.
 
 ## Rapid Start
 
-- `npm i reactor-for-angular`
-- ``
-  @Component({
+- Install the library `npm i reactor-for-angular`
+- Write your wrapper ```@Component({
   selector: 'react-component-wrapper',
   template: `<span #title>Here will be a component</span>`
   })
@@ -21,6 +20,5 @@ This library supports both React 17 and 18 root API.
       return <RealReactComponent parameter={this.parameter} method={() => {}} />
     }
   }
-``
 
 
