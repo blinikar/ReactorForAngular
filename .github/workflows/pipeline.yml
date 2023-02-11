@@ -15,7 +15,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - run: npm ci
       - run: npm run build:lib
-#      - run: cd dist/reactor-for-angular
-      - run: npm run publish:lib
+      - run: cd dist/reactor-for-angular
+      - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -7,8 +7,7 @@
     "build": "ng build",
     "build:lib": "ng build ReactorForAngular",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "publish:lib": "npm publish dist/reactor-for-angular"
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
