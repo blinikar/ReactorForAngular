@@ -5,6 +5,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: github-actions
     steps:
       - uses: workflows/checkout@v3
       # Setup .npmrc file to publish to npm
